@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("View Did Load!")
+        messageLabel.text = ""
         // Do any additional setup after loading the view.
     }
     @IBAction func showMessageButtonPressed(_ sender: UIButton) {

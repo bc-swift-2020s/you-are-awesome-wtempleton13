@@ -15,35 +15,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-Sa-rhg">
-                                <rect key="frame" x="16" y="20" width="288" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyy-nb-0Ir">
-                                <rect key="frame" x="16" y="104" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jLW-qY-8lm">
+                                <rect key="frame" x="16" y="159" width="288" height="389"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyy-nb-0Ir">
+                                <rect key="frame" x="16" y="121" width="104" height="30"/>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="showMessageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acX-Wj-0GK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Koh-lq-tZZ">
-                                <rect key="frame" x="141" y="104" width="163" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder Text!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-Sa-rhg">
+                                <rect key="frame" x="16" y="20" width="0.0" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="q8m-T3-u8S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Koh-lq-tZZ">
+                                <rect key="frame" x="141" y="121" width="163" height="30"/>
                                 <state key="normal" title="Show Another Message"/>
                                 <connections>
                                     <action selector="showMessageButtonTwoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RX4-v7-tKV"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLW-qY-8lm">
-                                <rect key="frame" x="16" y="159" width="288" height="389"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jLW-qY-8lm" secondAttribute="bottom" constant="20" id="0AU-Ge-RLO"/>
+                            <constraint firstItem="Jyy-nb-0Ir" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6QZ-bn-YXm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Koh-lq-tZZ" secondAttribute="trailing" constant="16" id="80x-1S-gZ8"/>
+                            <constraint firstItem="jLW-qY-8lm" firstAttribute="top" secondItem="Koh-lq-tZZ" secondAttribute="bottom" constant="8" id="8n9-z5-iXy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Koh-lq-tZZ" secondAttribute="trailing" constant="16" id="AqC-PH-YQz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jLW-qY-8lm" secondAttribute="trailing" constant="16" id="KWF-vr-DGU"/>
+                            <constraint firstItem="Jyy-nb-0Ir" firstAttribute="top" secondItem="qi9-Sa-rhg" secondAttribute="bottom" constant="1" id="KaB-IO-LWR"/>
+                            <constraint firstItem="jLW-qY-8lm" firstAttribute="top" secondItem="Koh-lq-tZZ" secondAttribute="bottom" constant="8" id="MwX-wF-vGT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qi9-Sa-rhg" secondAttribute="trailing" constant="16" id="bqz-3F-CmU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Koh-lq-tZZ" secondAttribute="trailing" constant="16" id="dcw-Ib-Krd"/>
+                            <constraint firstItem="jLW-qY-8lm" firstAttribute="top" secondItem="Koh-lq-tZZ" secondAttribute="bottom" constant="8" id="gDp-5i-Fs4"/>
+                            <constraint firstItem="qi9-Sa-rhg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="h7b-uf-eSZ"/>
+                            <constraint firstItem="Koh-lq-tZZ" firstAttribute="top" secondItem="qi9-Sa-rhg" secondAttribute="bottom" constant="1" id="htI-I7-45r"/>
+                            <constraint firstItem="jLW-qY-8lm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="u6c-Rd-nog"/>
+                            <constraint firstItem="qi9-Sa-rhg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="y1P-Q8-jso"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
