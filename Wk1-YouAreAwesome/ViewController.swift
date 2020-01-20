@@ -20,14 +20,19 @@ class ViewController: UIViewController {
     }
     @IBAction func showMessageButtonPressed(_ sender: UIButton) {
         print("show Message Button Pressed")
-        messageLabel.text = "You Are Awesome!"
-        imageView.image = UIImage(named: "image0") 
+        let awesomeMessage = "You Are Awesome!"
+        let greatMessage = "You Are Great!"
+        let dopeMessage = "You Are Dope!"
+        if messageLabel.text == awesomeMessage {
+            messageLabel.text = greatMessage
+            imageView.image = UIImage(named: "image1")
+        } else  if messageLabel.text == greatMessage {
+            messageLabel.text = dopeMessage
+            imageView.image = UIImage(named: "image0")
+        } else {
+            messageLabel.text = awesomeMessage
+            imageView.image = UIImage(named: "image2")
+        }
     }
-    @IBAction func showMessageButtonTwoPressed(_ sender: UIButton) {
-        print("show Message Button Two Pressed")
-        messageLabel.text = "You Are Great!"
-    }
-    
-
 }
 
