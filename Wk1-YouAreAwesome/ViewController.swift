@@ -14,25 +14,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var imageNumber = 0
+    var messageNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print("View Did Load!")
         messageLabel.text = ""
         // Do any additional setup after loading the view.
     }
     
     @IBAction func showMessageButtonPressed(_ sender: UIButton) {
-        print(imageNumber)
-        // let imageName = "image" + String(imageNumber)
-        let imageName = "image\(imageNumber)"
-        imageView.image = UIImage(named: imageName)
-
-        imageNumber += 1
-        if imageNumber == 10 {
-            imageNumber = 0
-        }
+        let messageArray = ["You Are Awesome!",
+                          "You Are Great!",
+                          "You Are Fantastic!",
+                          "Let's Get Shwifty!"]
+        messageLabel.text = messageArray[messageNumber]
+        messageNumber += 1
+        
+//        print(imageNumber)
+//         // let imageName = "image" + String(imageNumber)
+//        let imageName = "image\(imageNumber)"
+//        imageView.image = UIImage(named: imageName)
+//
+//        imageNumber += 1
+//        if imageNumber == 10 {
+//            imageNumber = 0
+//        }
             //        print("show Message Button Pressed")
             //        let awesomeMessage = "You Are Awesome!"
             //        let greatMessage = "You Are Great!"
