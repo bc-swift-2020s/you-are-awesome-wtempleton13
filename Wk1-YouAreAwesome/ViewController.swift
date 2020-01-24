@@ -12,9 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    var index = 0
     
-    var imageNumber = 0
-    var messageNumber = 0
+//    var imageNumber = 0
+//    var messageNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +25,31 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showMessageButtonPressed(_ sender: UIButton) {
-        let messageArray = ["You Are Awesome!",
-                          "You Are Great!",
-                          "You Are Fantastic!",
-                          "Let's Get Shwifty!"]
-        messageLabel.text = messageArray[messageNumber]
-        messageNumber += 1
-        
+        let messages = ["What's up",
+                        "How you doin?",
+                        "What's up with you",
+                        "Nothing much really",
+                        "Yeah, me neither",
+                        "Just doin a lot of swift stuff",
+                        "Bro me too",
+                        "Are you any good?",
+                        "Eh, getting there",
+                        ]
+        messageLabel.text = messages[index]
+       
+        if index == messages.count - 1 {
+            index = 0
+        } else {
+            index = index + 1
+        }
+      
+        //        let messageArray = ["You Are Awesome!",
+//                          "You Are Great!",
+//                          "You Are Fantastic!",
+//                          "Let's Get Shwifty!"]
+//        messageLabel.text = messageArray[messageNumber]
+//        messageNumber += 1
+//
 //        print(imageNumber)
 //         // let imageName = "image" + String(imageNumber)
 //        let imageName = "image\(imageNumber)"
