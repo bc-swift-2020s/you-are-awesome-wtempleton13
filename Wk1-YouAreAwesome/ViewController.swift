@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
 
     var messageNumber: Int = -1
     var imageNumber: Int = -1
+    var audioPlayer = AVAudioPlayer()
 
 //    var imageNumber = 0
 //    var messageNumber = 0
@@ -53,7 +55,20 @@ class ViewController: UIViewController {
             newImage = UIImage(named: "image\(Int.random(in: 0...9))")!
         }    while imageView.image == newImage
         imageView.image = newImage
-      
+    
+        if let sound = NSDataAsset(name: "sound0") {
+            do {
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            } catch {
+                print("ERROR: \(error.localizedDescription) could not initialize AVAudioPlayer object")
+            }
+            
+        }  else {
+            print("ERROR: Could not read data from file sound0")
+        }
+        
+    }
 //  ****** Main takeaway from 2.10 ****
 //        messageLabel.text = messages[Int.random(in: 0...messages.count-1)]
 //
@@ -62,7 +77,7 @@ class ViewController: UIViewController {
        
        
              
-        }
+        
       
         //        let messageArray = ["You Are Awesome!",
 //                          "You Are Great!",
