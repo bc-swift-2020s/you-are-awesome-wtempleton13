@@ -35,12 +35,14 @@ class ViewController: UIViewController {
                         "Are you any good?",
                         "Eh, getting there",
                         ]
-        messageLabel.text = messages[index]
+        messageLabel.text = messages[Int.random(in: 0...messages.count-1)]
+        print("show Message button Pressed")
+        
+        imageView.image = UIImage(named: "image\(Int.random(in: 0...9))")
+        
+        // imageView.image =
        
-        if index == messages.count - 1 {
-            index = 0
-        } else {
-            index = index + 1
+             
         }
       
         //        let messageArray = ["You Are Awesome!",
@@ -74,5 +76,5 @@ class ViewController: UIViewController {
             //            imageView.image = UIImage(named: "image2")
             //        }
     }
-}
+
 
