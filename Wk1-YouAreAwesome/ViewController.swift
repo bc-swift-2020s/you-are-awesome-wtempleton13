@@ -12,8 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    var index = 0
-    
+
+    var messageNumber: Int = -1
+    var imageNumber: Int = -1
+
 //    var imageNumber = 0
 //    var messageNumber = 0
     
@@ -35,12 +37,29 @@ class ViewController: UIViewController {
                         "Are you any good?",
                         "Eh, getting there",
                         ]
-        messageLabel.text = messages[Int.random(in: 0...messages.count-1)]
-        print("show Message button Pressed")
+        var newMessageNumber: Int
+        repeat {
+            
+            newMessageNumber = Int.random(in: 0...messages.count-1)
+       
+            
+        } while newMessageNumber == messageNumber
+        messageNumber = newMessageNumber
+        messageLabel.text = messages[messageNumber]
+
+        var newImage: UIImage
+        repeat {
+            imageNumber += 1
+            newImage = UIImage(named: "image\(Int.random(in: 0...9))")!
+        }    while imageView.image == newImage
+        imageView.image = newImage
+      
+//  ****** Main takeaway from 2.10 ****
+//        messageLabel.text = messages[Int.random(in: 0...messages.count-1)]
+//
+//        imageView.image = UIImage(named: "image\(Int.random(in: 0...9))")
         
-        imageView.image = UIImage(named: "image\(Int.random(in: 0...9))")
-        
-        // imageView.image =
+       
        
              
         }
